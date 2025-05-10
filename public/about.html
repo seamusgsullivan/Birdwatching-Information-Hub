@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdwatching Information Hub - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Birdwatching Information Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>About This Project</h2>
+        <p>The Birdwatching Information Hub, created by Seamus Sullivan, is a platform designed to make birdwatching more accessible and engaging for everyone. Using the power of the eBird API, this project provides near real-time bird observation data to birdwatchers, researchers, and nature enthusiasts.</p>
+        <p>My goal is to help users track bird sightings, discover rare species, and contribute to global conservation efforts. Whether you're a seasoned birder or a beginner, this platform offers tools to improve your birdwatching experience.</p>
+        <p>The eBird API, developed by the Cornell Lab of Ornithology, provides live bird observation data submitted by birdwatchers worldwide. You can learn more about the eBird platform at <a href="https://ebird.org/home" target="_blank">eBird.org</a>. For developers interested in the technical details, the <a href="https://documenter.getpostman.com/view/664302/S1ENwy59" target="_blank">eBird API documentation</a> provides more information.</p>
+        <h3>Why Birdwatching Matters</h3>
+        <p>Birdwatching is more than just a hobby - it's an important activity for conservation and biodiversity. By observing and recording bird sightings, you contribute to a global database that helps scientists monitor bird populations, track migration patterns, and identify species at risk.</p>
+        <p>This project aims to make it easier for everyone to access up-to-date information, which creates a deeper connection with nature and encourages participation in conservation efforts.</p>
+        <h3>Features of the Birdwatching Information Hub</h3>
+        <div>
+            <p>• Search for recent bird sightings by region and/or species.</p>
+            <p>• Discover notable and rare bird sightings in your area.</p>
+            <p>• Access near real-time data from the eBird API.</p>
+            <p>• Learn about bird species and their habitats through search results.</p>
+        </div>
+        <div class="bird-images">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1613164563503-902995c92402?q=80&w=1471&auto=format&fit=crop&ixlib.rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dark-Eyed Junco">
+                <figcaption class="image-caption">Dark-Eyed Junco</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1630186617564-9317a3b4ca32?q=80&w=1472&auto=format&fit=crop&ixlib.rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blue Jay">
+                <figcaption class="image-caption">Blue Jay</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1704138108340-8f74adf5839e?q=80&w=1471&auto=format&fit=crop&ixlib.rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Red-Bellied Woodpecker">
+                <figcaption class="image-caption">Red-Bellied Woodpecker</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Birdwatching Information Hub | Powered by <a href="https://ebird.org/home" target="_blank">eBird</a>
+        <p>Total Searches: <span id="total-searches">Loading...</span></p>
+        <p>Most Searched Birds: <span id="most-searched-birds">Loading...</span></p>
+    </footer>
+    <script src="scripts.js" defer></script>
+</body>
+</html>

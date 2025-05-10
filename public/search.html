@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdwatching Information Hub - Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Birdwatching Information Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Search for Recent Bird Sightings</h2>
+        <div class="search-container">
+            <label for="search-type">Select Search Type:</label>
+            <select id="search-type">
+                <option value="all">All Sightings (Enter Region Only)</option>
+                <option value="notable">Notable Sightings (Enter Region Only)</option>
+                <option value="specific">Specific Species & Region (Enter Region & Species)</option>
+            </select>
+            <input type="text" id="region" placeholder="Enter region...">
+            <input type="text" id="species" placeholder="Enter species..." style="display: none;">
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="pagination-settings" id="pagination-settings">
+            <label for="results-per-page">Results per page:</label>
+            <select id="results-per-page">
+                <option value="10">10</option>
+                <option value="20" selected>20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+        <h3 id="recent-sightings-title">Recent Sightings</h3>
+        <p id="results-message" class="results-info"></p>
+        <ul id="sightings-list"></ul>
+        <div id="pagination-controls"></div>
+    </main>
+    <footer>
+        &copy; 2025 Birdwatching Information Hub | Powered by <a href="https://ebird.org/home" target="_blank">eBird</a>
+        <p>Total Searches: <span id="total-searches">Loading...</span></p>
+        <p>Most Searched Birds: <span id="most-searched-birds">Loading...</span></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="scripts.js" defer></script>
+</body>
+</html>

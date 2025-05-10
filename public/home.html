@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdwatching Information Hub - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header>
+        <h1>Birdwatching Information Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Welcome to the Birdwatching Information Hub!</h2>
+        <p>Explore recent bird sightings, learn about different species, and discover notable observations in your area or around the world.</p>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1623719678037-84c54bfde8c8?q=80&w=1471&auto=format&fit=crop&ixlib.rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="House Sparrow">
+                        <figcaption class="image-caption">House Sparrow</figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1608561220714-a7522ff43710?q=80&w=1480&auto=format&fit=crop&ixlib.rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="American Robin">
+                        <figcaption class="image-caption">American Robin</figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1623369527344-2e92e91d3bbd?q=80&w=1470&auto=format&fit=crop&ixlib.rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tufted Titmouse">
+                        <figcaption class="image-caption">Tufted Titmouse</figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1624133310859-348852f33103?q=80&w=1171&auto=format&fit=crop&ixlib.rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Northern Cardinal">
+                        <figcaption class="image-caption">Northern Cardinal</figcaption>
+                    </figure>
+                </div>
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1674431074456-82f2a6ea34da?q=80&w=1469&auto=format&fit=crop&ixlib.rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Black-Capped Chickadee">
+                        <figcaption class="image-caption">Black-Capped Chickadee</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <p>Use the navigation bar at the top of each page to select a page. There are 4 pages on this site:</p>
+        <div> 
+            <p>• <strong>Home Page:</strong> This one! Featuring a glimpse of common birds.</p>
+            <p>• <strong>Search Page:</strong> Search for recent sightings of birds by location or species.</p>
+            <p>• <strong>About Page:</strong> Learn more about this project and its goals.</p>
+            <p>• <strong>Help Page:</strong> Get assistance with using the site.</p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Birdwatching Information Hub | Powered by <a href="https://ebird.org/home" target="_blank">eBird</a>
+        <p>Total Searches: <span id="total-searches">Loading...</span></p>
+        <p>Most Searched Birds: <span id="most-searched-birds">Loading...</span></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js" defer></script>
+</body>
+</html>

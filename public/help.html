@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdwatching Information Hub - Help</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Birdwatching Information Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Help</h2>
+        <p>Welcome to the Birdwatching Information Hub! Here's how to use the site:</p>
+        <div>
+            <p><strong>Step 1:</strong> Navigate to the <a href="search.html">Search Page</a> and select one of the three search types from the dropdown menu:</p>
+            <p><strong>• All Sightings:</strong> Displays recent bird sightings (up to 1000) from the last 30 days in the specified region.</p>
+            <p><strong>• Notable Sightings:</strong> Shows recent rare or unusual bird sightings (up to 1000) from the last 30 days in the specified region.</p>
+            <p><strong>• Specific Species:</strong> Finds recent sightings (up to 1000) of a specific bird species from the last 30 days in the specified region.</p>
+        </div>
+        <div>
+            <p><strong>Step 2:</strong> Enter the required information in the search fields. Searches are case-insensitive, so "california" works the same as "California".</p>
+            <p><strong>• Region:</strong> Enter the full name of a US state (e.g., "Michigan", not "MI") or a country (e.g., "France", not "FR"). For the United States, use "United States" (not "US", "USA", or "United States of America").</p>
+            <p><strong>• Species:</strong> (Only for "Specific Species" search) Enter the common name of a bird species (e.g., "American Robin", "House Sparrow").</p>
+            <p><em>Note: If you search for a very general species (e.g., "Sparrow"), the results might take a few seconds to appear as the system checks many related species codes.</em></p>
+        </div>
+        <div>
+            <p><strong>Step 3:</strong> Click the "Search" button to view the results.</p>
+        </div>
+        <div>
+            <p><strong>Step 4:</strong> Understand the results:</p>
+            <p><strong>• Recent Sightings:</strong> The results include sightings from the last 30 days, listed in order from most recent to least recent. Observation dates and times are shown in the local time zone of where the sighting occurred.</p>
+            <p><strong>• Result Limit:</strong> To ensure good performance, searches are limited to a maximum of 1000 sightings. If your search criteria match this limit (meaning there might have been more than 1000 recent observations), only the most recent 1000 will be displayed, and a message will appear above the results indicating this.</p>
+            <p><strong>• Results Per Page:</strong> Use the "Results per page" dropdown to select how many results you want to see on each page (e.g., 10, 20, 50, or 100).</p>
+            <p><strong>• Page Navigation:</strong> Use the "Previous" and "Next" buttons below the results list to navigate between pages of results. The "Page x of x" text shows your current page and the total number of pages.</p>
+        </div>
+        <div> 
+            <p><strong>Understanding the Footer Statistics:</strong></p>
+            <p>At the bottom of every page, you'll find some interesting statistics:</p>
+            <p><strong>• Total Searches:</strong> This shows the total number of searches performed on this website by all users.</p>
+            <p><strong>• Most Searched Birds:</strong> This lists the top 5 most searched bird species on this site, along with their search counts. Only specific species searches contribute to this list.</p>
+        </div>
+        <h3>FAQs</h3>
+        <p><strong>Why are some birds not listed?</strong> The data comes directly from the eBird API, which depends on user-submitted observations reported within the last 30 days. Additionally, results are capped at the 1000 most recent sightings for any given search.</p>
+        <p><strong>How often is the data updated?</strong> The source eBird data is updated in near real-time as new observations are submitted by birdwatchers globally.</p>
+        <p><strong>What regions can I search?</strong> You can search for bird sightings in any US state or country supported by the eBird API.</p>
+    </main>
+    <footer>
+        &copy; 2025 Birdwatching Information Hub | Powered by <a href="https://ebird.org/home" target="_blank">eBird</a>
+        <p>Total Searches: <span id="total-searches">Loading...</span></p>
+        <p>Most Searched Birds: <span id="most-searched-birds">Loading...</span></p>
+    </footer>
+    <script src="scripts.js" defer></script>
+</body>
+</html>
