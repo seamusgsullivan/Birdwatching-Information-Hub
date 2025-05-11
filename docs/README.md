@@ -1,5 +1,7 @@
 # Birdwatching Information Hub
 
+**Live Application:** [View the Birdwatching Information Hub on Vercel](https://birdwatching-information-hub.vercel.app/)
+
 ## Project Description
 
 The Birdwatching Information Hub is a web application designed to make birdwatching more accessible and engaging for everyone. It allows users to search for recent bird sightings by location (country or US state) and/or by species name. The application fetches near real-time observation data from the eBird API, processes it through a custom backend server, and displays it in a user-friendly format with pagination. Key features include searching for all recent sightings, notable (rare or unusual) sightings, and specific species. The site also tracks and displays usage statistics, such as total searches performed and the most frequently searched bird species.
@@ -110,9 +112,10 @@ A `.env` file is used on local computers to store secret keys (like the eBird AP
     This command uses `nodemon` to start the `index.js` server, which typically listens on `http://localhost:3000`. `nodemon` will automatically restart the server upon detecting file changes in the backend code. Monitor the terminal for messages indicating the server has started successfully.
 
 2.  **View the Frontend:**
-    * Open any of the HTML files (e.g., `home.html`, `search.html`) in a web browser.
-    * **Recommended Method:** If using VS Code, install the "Live Server" extension. Right-click on an HTML file (like `home.html`) in the file explorer and choose "Open with Live Server." This usually serves the page from an address like `http://127.0.0.1:5500`.
-    * The displayed web pages will then retrieve data by making requests to the backend server running at `http://localhost:3000`.
+    * Open any of the HTML files (e.g., `home.html`) in your web browser.
+    * **Method A (Recommended for Live Reload):** If using VS Code, install the "Live Server" extension. Right-click on an HTML file (like `home.html`) and choose "Open with Live Server." This usually serves the page from an address like `http://127.0.0.1:5500`.
+    * **Method B (Directly from the Node.js server):** Since the backend server (`index.js`) is also configured to serve the frontend files, you can alternatively navigate directly to `http://localhost:3000` in your browser after starting the backend.
+    * In both methods, the displayed web pages will retrieve API data by making requests to the backend server running at `http://localhost:3000/api/...`.
 
 #### 2.4. Testing
 
@@ -123,7 +126,7 @@ Currently, the project does not include automated tests. Testing should be perfo
 The backend server (`index.js`) provides several API endpoints that the frontend uses. When the application is deployed (e.g., on Vercel), the frontend will call these using relative paths (e.g., `/api/stats`). For local development, the `scripts.js` file is configured to use `http://localhost:3000` as the base URL for these API calls.
 
 * **`GET /api/stats`**
-    * **Purpose:** Retrieves current search statistics (total overall searches and the top 5 most searched bird species) from the Supabase database.
+    * **Purpose:** Retrieves current search statistics from the Supabase database: the total overall searches, and the top 5 (or fewer, if not enough distinct species have been searched) most searched bird species.
     * **Returns:** JSON data. Example:
         ```json
         {
@@ -131,7 +134,6 @@ The backend server (`index.js`) provides several API endpoints that the frontend
           "topBirds": [
             { "species_name": "american robin", "count": 15 },
             { "species_name": "house sparrow", "count": 12 }
-            // ... up to 5 birds
           ]
         }
         ```

@@ -3,6 +3,7 @@ dotenv.config();
 const express = require('express');
 const cors = require('cors');
 const { createClient } = require('@supabase/supabase-js');
+const path = require('path');
 
 const eBirdAPIKey = process.env.EBIRD_API_KEY;
 const supabaseUrl = process.env.SUPABASE_URL;
@@ -22,6 +23,12 @@ const port = process.env.PORT || 3000;
 const MAX_RESULTS_LIMIT = 1000;
 
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'home.html'));
+});
 
 app.get('/api/stats', async (req, res) => {
     console.log("[SERVER] GET /api/stats received");
