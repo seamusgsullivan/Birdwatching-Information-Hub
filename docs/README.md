@@ -52,7 +52,7 @@ A `.env` file is used on local computers to store secret keys (like the eBird AP
 
 * **Node.js and npm:** Node.js (the LTS version is recommended) and npm (which comes with Node.js) are required. They can be downloaded from [https://nodejs.org/](https://nodejs.org/).
 * **Git:** For cloning the project repository from GitHub.
-* **Supabase Account & Project:** A Supabase account ([Supabase.com](https://supabase.com/)) and a new project are necessary.
+* **Supabase Account & Project:** A Supabase account ([supabase.com](https://supabase.com/)) and a new project are necessary.
 * **eBird API Key:** A personal API key from eBird is needed to fetch bird data. To obtain one:
     1.  Go to the eBird data download and API access page: [https://ebird.org/data/download](https://ebird.org/data/download)
     2.  On that page, find the "eBird API" section.
@@ -63,7 +63,7 @@ A `.env` file is used on local computers to store secret keys (like the eBird AP
 1.  **Get the Code:**
     Open a terminal, navigate to the desired directory for projects, and run:
     ```bash
-    git clone [https://github.com/seamusgsullivan/Birdwatching-Information-Hub.git](https://github.com/seamusgsullivan/Birdwatching-Information-Hub.git)
+    git clone https://github.com/seamusgsullivan/Birdwatching-Information-Hub.git
     cd Birdwatching-Information-Hub
     ```
 
